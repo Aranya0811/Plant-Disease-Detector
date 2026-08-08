@@ -1,0 +1,35 @@
+# Data & models (too large for git)
+data/PlantVillage/
+data/raw/
+models/*.pt
+models/*.pth
+models/*.onnx
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & outputs
+logs/
+runs/
+*.log
+outputs/
+wandb/
+
+# Env secrets
+.env
