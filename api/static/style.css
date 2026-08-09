@@ -147,11 +147,13 @@ header .subtitle {
 
 /* Card layout wrapper */
 .main-layout {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
-    align-items: start;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 2.5rem;
+    width: 100%;
 }
 
 /* Card Container Styles (Glassmorphism) */
@@ -164,6 +166,8 @@ header .subtitle {
     -webkit-backdrop-filter: blur(16px);
     box-shadow: var(--glow-card);
     transition: var(--transition-smooth);
+    width: 100%;
+    max-width: 680px;
 }
 
 .card:hover {
@@ -567,11 +571,6 @@ footer p {
 @media (min-width: 768px) {
     body {
         padding: 4rem 2rem;
-    }
-
-    .main-layout {
-        grid-template-columns: 1fr 1.2fr;
-        gap: 3rem;
     }
 
     header h1 {
