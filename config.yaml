@@ -1,9 +1,5 @@
-# ── Dataset ──────────────────────────────────────────────────────────────────
-# Download from: https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset
-# Extract so path looks like: data/PlantVillage/color/Apple___Apple_scab/...
 data_dir: "data/PlantVillage/color"
 
-# Subset for 3-4 day timeline (10 classes). Set to null to use ALL classes.
 selected_classes:
   - "Tomato___healthy"
   - "Tomato___Early_blight"
@@ -16,32 +12,27 @@ selected_classes:
   - "Pepper__bell___Bacterial_spot"
   - "Apple___Apple_scab"
 
-# ── Training ─────────────────────────────────────────────────────────────────
 image_size: 224
 batch_size: 32
 num_epochs: 10
 learning_rate: 0.001
-num_workers: 2          # set 0 on Windows if DataLoader hangs
+num_workers: 0
 train_ratio: 0.70
 val_ratio: 0.15
 test_ratio: 0.15
 random_seed: 42
 
-# ── Model ────────────────────────────────────────────────────────────────────
-model_name: "resnet18"   # resnet18 | mobilenet_v2
-freeze_backbone: true    # only train last layers first (faster)
-unfreeze_epoch: 5        # fine-tune full model after this epoch (0 = never)
+model_name: "resnet18"
+freeze_backbone: true
+unfreeze_epoch: 5   
 
-# ── Paths ────────────────────────────────────────────────────────────────────
 model_save_path: "models/plant_disease_resnet18.pt"
 class_map_path: "models/class_map.json"
 logs_dir: "logs"
 
-# ── Inference / OpenCV ───────────────────────────────────────────────────────
 confidence_threshold: 0.50
 apply_clahe: true
-apply_leaf_mask: false   # optional HSV green mask; disable if it hurts accuracy
+apply_leaf_mask: false
 
-# ── API ──────────────────────────────────────────────────────────────────────
 api_host: "0.0.0.0"
 api_port: 8000

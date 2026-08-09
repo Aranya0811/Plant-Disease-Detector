@@ -1,0 +1,72 @@
+{
+  "class_to_idx": {
+    "Apple___Apple_scab": 0,
+    "Potato___Early_blight": 1,
+    "Potato___Late_blight": 2,
+    "Potato___healthy": 3,
+    "Tomato___Early_blight": 4,
+    "Tomato___Late_blight": 5,
+    "Tomato___Leaf_Mold": 6,
+    "Tomato___healthy": 7
+  },
+  "idx_to_class": {
+    "0": "Apple___Apple_scab",
+    "1": "Potato___Early_blight",
+    "2": "Potato___Late_blight",
+    "3": "Potato___healthy",
+    "4": "Tomato___Early_blight",
+    "5": "Tomato___Late_blight",
+    "6": "Tomato___Leaf_Mold",
+    "7": "Tomato___healthy"
+  },
+  "friendly_labels": {
+    "Apple___Apple_scab": {
+      "raw_class": "Apple___Apple_scab",
+      "plant": "Apple",
+      "condition": "Apple scab",
+      "display_name": "Apple \u2014 Apple scab"
+    },
+    "Potato___Early_blight": {
+      "raw_class": "Potato___Early_blight",
+      "plant": "Potato",
+      "condition": "Early blight",
+      "display_name": "Potato \u2014 Early blight"
+    },
+    "Potato___Late_blight": {
+      "raw_class": "Potato___Late_blight",
+      "plant": "Potato",
+      "condition": "Late blight",
+      "display_name": "Potato \u2014 Late blight"
+    },
+    "Potato___healthy": {
+      "raw_class": "Potato___healthy",
+      "plant": "Potato",
+      "condition": "healthy",
+      "display_name": "Potato \u2014 healthy"
+    },
+    "Tomato___Early_blight": {
+      "raw_class": "Tomato___Early_blight",
+      "plant": "Tomato",
+      "condition": "Early blight",
+      "display_name": "Tomato \u2014 Early blight"
+    },
+    "Tomato___Late_blight": {
+      "raw_class": "Tomato___Late_blight",
+      "plant": "Tomato",
+      "condition": "Late blight",
+      "display_name": "Tomato \u2014 Late blight"
+    },
+    "Tomato___Leaf_Mold": {
+      "raw_class": "Tomato___Leaf_Mold",
+      "plant": "Tomato",
+      "condition": "Leaf Mold",
+      "display_name": "Tomato \u2014 Leaf Mold"
+    },
+    "Tomato___healthy": {
+      "raw_class": "Tomato___healthy",
+      "plant": "Tomato",
+      "condition": "healthy",
+      "display_name": "Tomato \u2014 healthy"
+    }
+  }
+}

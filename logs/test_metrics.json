@@ -1,0 +1,67 @@
+{
+  "test_accuracy": 0.9854368932038835,
+  "test_macro_f1": 0.9904484561868863,
+  "classification_report": {
+    "Apple___Apple_scab": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 94.0
+    },
+    "Potato___Early_blight": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 150.0
+    },
+    "Potato___Late_blight": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 150.0
+    },
+    "Potato___healthy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 23.0
+    },
+    "Tomato___Early_blight": {
+      "precision": 0.9675324675324676,
+      "recall": 0.9933333333333333,
+      "f1-score": 0.9802631578947368,
+      "support": 150.0
+    },
+    "Tomato___Late_blight": {
+      "precision": 0.9590443686006825,
+      "recall": 0.9790940766550522,
+      "f1-score": 0.9689655172413794,
+      "support": 287.0
+    },
+    "Tomato___Leaf_Mold": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 143.0
+    },
+    "Tomato___healthy": {
+      "precision": 0.9956331877729258,
+      "recall": 0.9539748953974896,
+      "f1-score": 0.9743589743589743,
+      "support": 239.0
+    },
+    "accuracy": 0.9854368932038835,
+    "macro avg": {
+      "precision": 0.9902762529882595,
+      "recall": 0.9908002881732344,
+      "f1-score": 0.9904484561868863,
+      "support": 1236.0
+    },
+    "weighted avg": {
+      "precision": 0.9857054496731354,
+      "recall": 0.9854368932038835,
+      "f1-score": 0.9854404304241758,
+      "support": 1236.0
+    }
+  }
+}
