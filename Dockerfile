@@ -16,6 +16,7 @@ RUN pip install --no-cache-dir \
     Pillow>=10.0.0 \
     numpy>=1.24.0 \
     pyyaml>=6.0 \
+    scikit-learn>=1.3.0 \
     --extra-index-url https://download.pytorch.org/whl/cpu \
     torch>=2.0.0 \
     torchvision>=0.15.0
