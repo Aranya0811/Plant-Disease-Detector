@@ -14,6 +14,8 @@ from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from api.routes import predict
 from src.config import load_config
@@ -62,13 +64,9 @@ app.add_middleware(
 )
 
 app.include_router(predict.router, prefix="/api/v1", tags=["Prediction"])
+app.mount("/static", StaticFiles(directory="api/static"), name="static")
 
 
 @app.get("/")
 async def root():
-    return {
-        "project": "Plant Disease Detector",
-        "docs": "/docs",
-        "health": "/api/v1/health",
-        "predict": "POST /api/v1/predict (multipart image upload)",
-    }
+    return FileResponse("api/static/index.html")
