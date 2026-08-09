@@ -349,3 +349,234 @@ header .subtitle {
     to { transform: rotate(360deg); }
 }
 
+/* Results Card Styles */
+.result-highlight {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--color-primary-glow);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    padding: 0.625rem 1.25rem;
+    border-radius: 12px;
+    align-self: flex-start;
+    font-weight: 600;
+}
+
+.result-badge #predicted-plant {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    letter-spacing: 1px;
+}
+
+.badge-divider {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    opacity: 0.5;
+}
+
+.result-badge #predicted-condition {
+    color: var(--text-primary);
+    font-size: 0.9375rem;
+}
+
+/* Confidence Gauge */
+.confidence-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.confidence-gauge {
+    width: 80px;
+    height: 80px;
+}
+
+.circular-chart {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.05);
+    stroke-width: 2.8;
+}
+
+.circle {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 1s ease-in-out;
+}
+
+.percentage {
+    fill: #fff;
+    font-family: var(--font-heading);
+    font-size: 8px;
+    font-weight: 700;
+    text-anchor: middle;
+}
+
+.confidence-details h3 {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.confidence-details p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Warnings */
+.warning-alert {
+    background: var(--color-warning-glow);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    color: var(--color-warning);
+}
+
+.warning-alert svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.warning-alert p {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+/* Top matches list */
+.top-matches {
+    margin-bottom: 2rem;
+}
+
+.top-matches h3 {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.match-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.match-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.match-name {
+    font-weight: 500;
+}
+
+.match-value {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.match-bar-bg {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.match-bar-fill {
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: 3px;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Annotated Visual Result */
+.annotated-container h3 {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.annotated-image-wrapper {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: #0B0F19;
+}
+
+.annotated-image-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive Grid Media Queries */
+@media (min-width: 768px) {
+    body {
+        padding: 4rem 2rem;
+    }
+
+    .main-layout {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 3rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+
