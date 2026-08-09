@@ -7,8 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
-# Install only minimal production dependencies to save RAM and disk space
-# Force CPU-only versions of PyTorch and Torchvision
+# Install minimal dependencies for API directly to save space and RAM
 RUN pip install --no-cache-dir \
     fastapi>=0.109.0 \
     uvicorn[standard]>=0.27.0 \
