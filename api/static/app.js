@@ -103,4 +103,49 @@ document.addEventListener('DOMContentLoaded', () => {
         diagnoseBtn.setAttribute('disabled', 'true');
         resultsSection.style.display = 'none';
     }
+
+    // Trigger diagnosis / API prediction call
+    diagnoseBtn.addEventListener('click', () => {
+        if (!selectedFile) return;
+
+        // Set Loading state
+        diagnoseBtn.setAttribute('disabled', 'true');
+        diagnoseSpinner.style.display = 'block';
+        diagnoseBtn.querySelector('span').textContent = 'Analyzing Leaf...';
+        resultsSection.style.display = 'none';
+
+        // Prepare multi-part form data
+        const formData = new FormData();
+        formData.append('file', selectedFile);
+
+        // Fetch prediction from FastAPI
+        fetch('/api/v1/predict/annotated', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('API server returned an error response.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            renderResults(data);
+        })
+        .catch(err => {
+            console.error(err);
+            alert('Failed to analyze the leaf. Please check that the backend server is running and try again.');
+        })
+        .finally(() => {
+            // Restore button state
+            diagnoseBtn.removeAttribute('disabled');
+            diagnoseSpinner.style.display = 'none';
+            diagnoseBtn.querySelector('span').textContent = 'Analyze Leaf';
+        });
+    });
+
+    // Helper placeholder for rendering results
+    function renderResults(data) {
+        console.log('Results received:', data);
+    }
 });
