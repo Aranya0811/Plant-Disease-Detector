@@ -1,7 +1,3 @@
-/* 
-   Plant Disease Detection UI Design System
-   Step 1: CSS Variables, Reset, Page Layout & Blur Blobs
-*/
 
 :root {
     --bg-dark: #0B0F19;
@@ -9,7 +5,7 @@
     --card-border: rgba(255, 255, 255, 0.08);
     --text-primary: #F3F4F6;
     --text-secondary: #9CA3AF;
-    --color-primary: #10B981; /* Emerald Green */
+    --color-primary: #10B981; 
     --color-primary-glow: rgba(16, 185, 129, 0.15);
     --color-success: #059669;
     --color-error: #EF4444;
@@ -22,14 +18,12 @@
     --font-body: 'Plus Jakarta Sans', sans-serif;
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 }
-
 body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
@@ -41,8 +35,6 @@ body {
     overflow-x: hidden;
     padding: 2rem 1rem;
 }
-
-/* Decorative Glow Blobs */
 .blur-blob {
     position: absolute;
     border-radius: 50%;
@@ -52,7 +44,6 @@ body {
     pointer-events: none;
     transition: var(--transition-smooth);
 }
-
 .blob-1 {
     width: 300px;
     height: 300px;
@@ -61,37 +52,31 @@ body {
     left: -50px;
     animation: float-slow 15s infinite alternate;
 }
-
 .blob-2 {
     width: 400px;
     height: 400px;
-    background: #0284c7; /* Sky blue */
+    background: #0284c7; 
     bottom: -100px;
     right: -100px;
     animation: float-slow 20s infinite alternate-reverse;
 }
-
 .blob-3 {
     width: 250px;
     height: 250px;
-    background: #4f46e5; /* Indigo */
+    background: #4f46e5; 
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: pulse-slow 12s infinite ease-in-out;
 }
-
 @keyframes float-slow {
     0% { transform: translate(0, 0) scale(1); }
     100% { transform: translate(40px, 40px) scale(1.1); }
 }
-
 @keyframes pulse-slow {
     0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
     50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.1); }
 }
-
-/* Layout container */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -99,13 +84,10 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-/* Header style */
 header {
     text-align: center;
     margin-bottom: 2.5rem;
 }
-
 header .logo {
     width: 54px;
     height: 54px;
@@ -120,12 +102,10 @@ header .logo {
     align-items: center;
     justify-content: center;
 }
-
 header .logo svg {
     width: 100%;
     height: 100%;
 }
-
 header h1 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
@@ -136,7 +116,6 @@ header h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 header .subtitle {
     font-size: 1rem;
     color: var(--text-secondary);
@@ -144,8 +123,6 @@ header .subtitle {
     margin: 0 auto;
     line-height: 1.5;
 }
-
-/* Card layout wrapper */
 .main-layout {
     display: flex;
     flex-direction: column;
@@ -155,8 +132,6 @@ header .subtitle {
     margin-bottom: 2.5rem;
     width: 100%;
 }
-
-/* Card Container Styles (Glassmorphism) */
 .card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -169,28 +144,22 @@ header .subtitle {
     width: 100%;
     max-width: 680px;
 }
-
 .card:hover {
     border-color: rgba(255, 255, 255, 0.12);
 }
-
 .card-header {
     margin-bottom: 1.5rem;
 }
-
 .card-header h2 {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
 }
-
 .card-header p {
     font-size: 0.875rem;
     color: var(--text-secondary);
 }
-
-/* Drop Zone Styles */
 .drop-zone {
     border: 2px dashed rgba(255, 255, 255, 0.15);
     border-radius: 16px;
@@ -202,19 +171,16 @@ header .subtitle {
     overflow: hidden;
     background: rgba(255, 255, 255, 0.01);
 }
-
 .drop-zone.dragover {
     border-color: var(--color-primary);
     background: rgba(16, 185, 129, 0.03);
     box-shadow: inset 0 0 20px rgba(16, 185, 129, 0.05);
 }
-
 .drop-zone-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .upload-icon {
     width: 48px;
     height: 48px;
@@ -222,18 +188,15 @@ header .subtitle {
     margin-bottom: 1rem;
     transition: var(--transition-smooth);
 }
-
 .drop-zone:hover .upload-icon {
     color: var(--color-primary);
     transform: translateY(-4px);
 }
-
 .upload-text {
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 0.25rem;
 }
-
 .upload-or {
     font-size: 0.8125rem;
     color: var(--text-secondary);
@@ -241,8 +204,6 @@ header .subtitle {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
-/* Buttons */
 .btn {
     font-family: var(--font-body);
     font-size: 0.875rem;
@@ -257,45 +218,36 @@ header .subtitle {
     gap: 0.5rem;
     transition: var(--transition-smooth);
 }
-
 .btn-primary {
     background: rgba(255, 255, 255, 0.08);
     color: var(--text-primary);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .btn-primary:hover {
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.2);
 }
-
 .btn-success {
     background: var(--color-primary);
     color: #fff;
     box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.3);
 }
-
 .btn-success:hover:not(:disabled) {
     background: var(--color-success);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px 0 rgba(16, 185, 129, 0.4);
 }
-
 .btn-success:disabled {
     opacity: 0.4;
     cursor: not-allowed;
     box-shadow: none;
 }
-
 .btn-full {
     width: 100%;
 }
-
 .upload-footer {
     margin-top: 1.5rem;
 }
-
-/* Preview Image container */
 .preview-container {
     position: absolute;
     top: 0;
@@ -304,13 +256,11 @@ header .subtitle {
     height: 100%;
     background: #0B0F19;
 }
-
 .preview-container img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-
 .btn-remove {
     position: absolute;
     top: 12px;
@@ -328,18 +278,14 @@ header .subtitle {
     cursor: pointer;
     transition: var(--transition-smooth);
 }
-
 .btn-remove:hover {
     background: var(--color-error);
     transform: scale(1.1);
 }
-
 .btn-remove svg {
     width: 18px;
     height: 18px;
 }
-
-/* Spinner */
 .spinner {
     width: 20px;
     height: 20px;
@@ -348,12 +294,9 @@ header .subtitle {
     border-top-color: #fff;
     animation: spin 0.8s linear infinite;
 }
-
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
-
-/* Results Card Styles */
 .result-highlight {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -364,7 +307,6 @@ header .subtitle {
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
-
 .result-badge {
     display: inline-flex;
     align-items: center;
@@ -376,7 +318,6 @@ header .subtitle {
     align-self: flex-start;
     font-weight: 600;
 }
-
 .result-badge #predicted-plant {
     color: var(--color-primary);
     font-family: var(--font-heading);
@@ -384,7 +325,6 @@ header .subtitle {
     font-size: 0.8125rem;
     letter-spacing: 1px;
 }
-
 .badge-divider {
     width: 4px;
     height: 4px;
@@ -392,36 +332,29 @@ header .subtitle {
     background: var(--color-primary);
     opacity: 0.5;
 }
-
 .result-badge #predicted-condition {
     color: var(--text-primary);
     font-size: 0.9375rem;
 }
-
-/* Confidence Gauge */
 .confidence-container {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
-
 .confidence-gauge {
     width: 80px;
     height: 80px;
 }
-
 .circular-chart {
     display: block;
     max-width: 100%;
     max-height: 100%;
 }
-
 .circle-bg {
     fill: none;
     stroke: rgba(255, 255, 255, 0.05);
     stroke-width: 2.8;
 }
-
 .circle {
     fill: none;
     stroke: var(--color-primary);
@@ -429,7 +362,6 @@ header .subtitle {
     stroke-linecap: round;
     transition: stroke-dasharray 1s ease-in-out;
 }
-
 .percentage {
     fill: #fff;
     font-family: var(--font-heading);
@@ -437,7 +369,6 @@ header .subtitle {
     font-weight: 700;
     text-anchor: middle;
 }
-
 .confidence-details h3 {
     font-size: 0.875rem;
     color: var(--text-secondary);
@@ -445,14 +376,11 @@ header .subtitle {
     letter-spacing: 0.5px;
     margin-bottom: 0.25rem;
 }
-
 .confidence-details p {
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--color-primary);
 }
-
-/* Warnings */
 .warning-alert {
     background: var(--color-warning-glow);
     border: 1px solid rgba(245, 158, 11, 0.2);
@@ -464,23 +392,18 @@ header .subtitle {
     margin-bottom: 1.5rem;
     color: var(--color-warning);
 }
-
 .warning-alert svg {
     width: 20px;
     height: 20px;
     flex-shrink: 0;
 }
-
 .warning-alert p {
     font-size: 0.875rem;
     line-height: 1.4;
 }
-
-/* Top matches list */
 .top-matches {
     margin-bottom: 2rem;
 }
-
 .top-matches h3 {
     font-size: 0.875rem;
     color: var(--text-secondary);
@@ -488,41 +411,34 @@ header .subtitle {
     letter-spacing: 0.5px;
     margin-bottom: 1rem;
 }
-
 .matches-list {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
-
 .match-item {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-
 .match-info {
     display: flex;
     justify-content: space-between;
     font-size: 0.875rem;
 }
-
 .match-name {
     font-weight: 500;
 }
-
 .match-value {
     color: var(--text-secondary);
     font-weight: 600;
 }
-
 .match-bar-bg {
     height: 6px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 3px;
     overflow: hidden;
 }
-
 .match-bar-fill {
     height: 100%;
     background: var(--color-primary);
@@ -530,8 +446,6 @@ header .subtitle {
     width: 0;
     transition: width 1s ease-in-out;
 }
-
-/* Annotated Visual Result */
 .annotated-container h3 {
     font-size: 0.875rem;
     color: var(--text-secondary);
@@ -539,7 +453,6 @@ header .subtitle {
     letter-spacing: 0.5px;
     margin-bottom: 1rem;
 }
-
 .annotated-image-wrapper {
     width: 100%;
     border-radius: 16px;
@@ -548,34 +461,25 @@ header .subtitle {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     background: #0B0F19;
 }
-
 .annotated-image-wrapper img {
     width: 100%;
     display: block;
 }
-
-/* Footer styling */
 footer {
     text-align: center;
     margin-top: auto;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
-
 footer p {
     font-size: 0.8125rem;
     color: var(--text-secondary);
 }
-
-/* Responsive Grid Media Queries */
 @media (min-width: 768px) {
     body {
         padding: 4rem 2rem;
     }
-
     header h1 {
         font-size: 3rem;
     }
 }
-
-

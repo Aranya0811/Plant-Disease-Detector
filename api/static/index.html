@@ -5,21 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Disease Classifier</title>
     <meta name="description" content="AI-powered plant leaf disease detection using PyTorch ResNet18 and OpenCV.">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Main stylesheet -->
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <!-- Background Blur Decorative Blobs -->
     <div class="blur-blob blob-1"></div>
     <div class="blur-blob blob-2"></div>
     <div class="blur-blob blob-3"></div>
-
     <div class="container">
-        <!-- Header -->
         <header>
             <div class="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -29,17 +24,12 @@
             <h1>Plant Disease Detector</h1>
             <p class="subtitle">Upload a photo of a plant leaf to detect and diagnose diseases</p>
         </header>
-
-        <!-- Main Content -->
         <main class="main-layout">
-            
-            <!-- Upload section -->
             <section class="card upload-card" id="upload-section">
                 <div class="card-header">
                     <h2>Upload Leaf Image</h2>
                     <p>Select or drag a leaf photo to diagnose</p>
                 </div>
-                
                 <div class="drop-zone" id="drop-zone">
                     <div class="drop-zone-content">
                         <div class="upload-icon">
@@ -52,8 +42,6 @@
                         <button type="button" class="btn btn-primary" id="browse-btn">Browse Files</button>
                         <input type="file" id="file-input" accept="image/jpeg,image/png" style="display: none;">
                     </div>
-                    
-                    <!-- Preview Container -->
                     <div class="preview-container" id="preview-container" style="display: none;">
                         <img src="" alt="Uploaded Leaf Preview" id="image-preview">
                         <button type="button" class="btn-remove" id="remove-btn" title="Remove image">
@@ -63,7 +51,6 @@
                         </button>
                     </div>
                 </div>
-
                 <div class="upload-footer">
                     <button type="button" class="btn btn-success btn-full" id="diagnose-btn" disabled>
                         <span>Analyze Leaf</span>
@@ -71,15 +58,11 @@
                     </button>
                 </div>
             </section>
-
-            <!-- Results Section (hidden by default) -->
             <section class="card results-card" id="results-section" style="display: none;">
                 <div class="card-header">
                     <h2>Diagnosis Results</h2>
                     <p id="result-status-text">Analysis completed successfully</p>
                 </div>
-
-                <!-- Primary Result Box -->
                 <div class="result-highlight">
                     <div class="result-badge" id="result-badge">
                         <span id="predicted-plant">Tomato</span>
@@ -100,24 +83,17 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Warning Message -->
                 <div class="warning-alert" id="low-confidence-warning" style="display: none;">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
                     </svg>
                     <p id="warning-text">Low confidence prediction. Make sure the leaf is clearly centered on a plain background.</p>
                 </div>
-
-                <!-- Top 3 Probabilities -->
                 <div class="top-matches">
                     <h3>Probable Matches</h3>
                     <div class="matches-list" id="matches-list">
-                        <!-- Dynamic content filled by JS -->
                     </div>
                 </div>
-
-                <!-- Annotated Image from OpenCV -->
                 <div class="annotated-container">
                     <h3>Visual Overlay (OpenCV bounding box)</h3>
                     <div class="annotated-image-wrapper">
@@ -125,15 +101,11 @@
                     </div>
                 </div>
             </section>
-
         </main>
-        
         <footer>
             <p>Plant Disease Detector</p>
         </footer>
     </div>
-
-    <!-- Script File -->
     <script src="/static/app.js"></script>
 </body>
 </html>
